@@ -72,4 +72,4 @@ type Mutation {
 
 ## Part 2
 
-See [CHANGES.md][/CHANGES.md].
+See [CHANGES.md](/CHANGES.md).
