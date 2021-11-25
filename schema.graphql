@@ -1,0 +1,33 @@
+scalar Date
+
+type User {
+  id: Int!
+  fullName: String!
+  picture: String
+}
+
+type Message {
+  id: Int!
+  text: String!
+  createdAt: Date
+  author: User!
+}
+
+type Forum {
+  id: Int!
+  # The following fields are only accessible to members of the forum. They will be null otherwise.
+  members: [User]
+  messages: [Message]
+}
+
+type Query {
+  joinedForums: [Forum]
+  availableForums: [Forum]
+  forum(id: Int!): Forum
+}
+
+type Mutation {
+  joinForum(id: Int!): Forum
+  createForum: Forum
+  postMessage(forumId: Int!, text: String!): Message
+}

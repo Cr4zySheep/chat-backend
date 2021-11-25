@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "fullName": "User 0",
+      "picture": "/random_picture.jpg"
+    },
+    {
+      "id": 1,
+      "fullName": "User 1"
+    }
+  ],
+  "forums": [
+    {
+      "id": 0,
+      "members": [
+        0
+      ]
+    },
+    {
+      "id": 1,
+      "members": [
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "members": [
+        0,
+        1
+      ]
+    }
+  ],
+  "rawMessages": [
+    {
+      "id": 0,
+      "text": "Lorem ipsum ...",
+      "authorId": 0,
+      "forumId": 0,
+      "createdAt": "2021-11-25T14:00:00.000Z"
+    },
+    {
+      "id": 1,
+      "text": "Lorem ipsum ...",
+      "authorId": 0,
+      "forumId": 0,
+      "createdAt": "2021-11-25T14:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "text": "Lorem ipsum ...",
+      "authorId": 0,
+      "forumId": 0,
+      "createdAt": "2021-11-25T14:15:00.000Z"
+    },
+    {
+      "id": 3,
+      "text": "Lorem ipsum ...",
+      "authorId": 1,
+      "forumId": 1,
+      "createdAt": "2021-11-25T09:15:00.000Z"
+    }
+  ]
+}
