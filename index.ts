@@ -7,7 +7,6 @@ import { GraphQLScalarType, Kind } from 'graphql';
 import { readFileSync } from 'fs';
 
 import { User, Forum, Context, Message } from './types';
-
 import loadFixtures from './data';
 
 const { users, forums, messages } = loadFixtures();
@@ -20,8 +19,8 @@ const dateScalar = new GraphQLScalarType({
   serialize: (value: Date) => value.toISOString(),
   parseValue: (value: number) => new Date(value),
   parseLiteral(ast) {
-    if (ast.kind === Kind.INT) {
-      return new Date(parseInt(ast.value, 10));
+    if (ast.kind === Kind.STRING) {
+      return new Date(ast.value);
     }
     return null;
   },
